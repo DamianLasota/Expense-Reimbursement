@@ -38,5 +38,5 @@ To-do list:
 * run project on a server
 
 ## Usage
-Create employees using the signup page, login, submit tickets, logout
-Login as finance manager, filter/approve/deny tickets, logout
+* Create employees using the signup page, login, submit tickets, logout
+* Login as finance manager, filter/approve/deny tickets, logout
