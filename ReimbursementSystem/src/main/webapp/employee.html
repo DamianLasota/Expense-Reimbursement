@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Employee Page</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="container-fluid justify-content-end">
+				<button class="btn btn-outline-success" id="logout" type="submit">Logout</button>
+			</div>
+		</nav>
+		<h3 id="welcome" style="text-align: center">Welcome</h3>
+		<br>
+		<div class="container shadow p-3 mb-5 bg-white rounded">
+			<h3 style="text-align: center"><b>Reimbursement Ticket</b></h3>
+			<div class="mb-3">
+				<label class="form-label" for="amount">Amount Spent:</label>
+				<div class="input-group flex-nowrap">
+					<span class="input-group-text">$</span>
+					<input class="form-control" type="number" id="amount" name="amount" placeholder="0.00" min="0" required>
+				</div>
+				<p id="response1" style="color: red"></p>
+			</div>
+			<div class="mb-3">
+				<label class="form-label" for="type">Type:</label>
+				<select class="form-select" id="type" name="type">
+					<option selected>Choose a type</option>
+					<option value="LODGING">LODGING</option>
+					<option value="TRAVEL">TRAVEL</option>
+					<option value="FOOD">FOOD</option>
+					<option value="OTHER">OTHER</option>
+				</select>
+				<p id="response2" style="color: red"></p>
+			</div>
+			<div class="mb-3">
+				<label class="form-label" for="description">Description:</label>
+				<textarea class="form-control" id="description" name="description" maxlength="60" required></textarea>
+				<p id="response3" style="color: red"></p>
+			</div>
+			<br>
+			<div class="d-grid gap-2 col-6 mx-auto">
+				<button class="btn btn-primary" id="submit" type="submit">Submit</button>
+				<p id="response4" style="color: red"></p>
+			</div>
+		</div>
+		<h3 style="text-align: center"><b>Ticket History</b></h3>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">Amount</th>
+					<th scope="col">Type</th>
+					<th scope="col">Description</th>
+					<th scope="col">Time Submitted</th>
+					<th scope="col">Status</th>
+				</tr>
+			</thead>
+			<tbody id="ticketTable">
+			</tbody>
+		</table>
+		<script src="/ReimbursementSystem/employee.js"></script>
+	</body>
+</html>

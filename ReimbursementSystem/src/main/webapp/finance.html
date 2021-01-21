@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Finance Manager Page</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	</head>
+	<body>
+		<nav class="navbar">
+			<div class="container-fluid justify-content-end">
+				<button class="btn btn-outline-success" id="logout" type="submit">Logout</button>
+			</div>
+		</nav>
+		<h3 id="welcome" style="text-align: center">Welcome</h3>
+		<h3 style="text-align: center"><b>Employee Tickets</b></h3>
+		<div class="container-fluid col-md-2">
+			<select class="form-select " id="filter" onchange="filter()">
+				<option value="ALL">ALL</option>
+				<option value="PENDING">PENDING</option>
+			</select>
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">User ID</th>
+					<th scope="col">Username</th>
+					<th scope="col">First Name</th>
+					<th scope="col">Last Name</th>
+					<th scope="col">Email</th>
+					<th scope="col">Ticket ID</th>
+					<th scope="col">Amount</th>
+					<th scope="col">Type</th>
+					<th scope="col">Description</th>
+					<th scope="col">Time Submitted</th>
+					<th scope="col">Status</th>
+					<th scope="col">Approve</th>
+					<th scope="col">Deny</th>
+				</tr>
+			</thead>
+			<tbody id="ticketTable">
+			</tbody>
+		</table>
+		<script src="/ReimbursementSystem/finance.js"></script>
+	</body>
+</html>
